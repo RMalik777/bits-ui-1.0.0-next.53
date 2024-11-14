@@ -1,5 +1,6 @@
 <script>
 	import * as Select from "$lib/components/ui/select/index.js"
+	let value = $state("system")
 </script>
 
 <svelte:head>
@@ -7,8 +8,8 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<Select.Root type="single">
-  <Select.Trigger>Open</Select.Trigger>
+<Select.Root type="single" {value}>
+  <Select.Trigger>{value}</Select.Trigger>
   <Select.Content>
     <Select.Item value="light">Light</Select.Item>
     <Select.Item value="dark">Dark</Select.Item>
